@@ -5,7 +5,7 @@ git init
 git add -A
 gt commit -m "adding all files from codebase"
 
-Now go to gitHub and create a repo named codebase (or whatever)
+Now go to GitHub and create a repo named codebase (or whatever)
 Copy the clone URL (will be something like https:...)
 
 Go back to the local codebase directory
@@ -17,7 +17,7 @@ git push origin master
 Workflow 2 - Create a GitHub repo and then clone it
 ------------------------------------------------------------------
 
-Now go to gitHub and create a repo named codebase (or whatever)
+Go to GitHub and create a repo named codebase (or whatever)
 Copy the clone URL
 
 Go to a local directory
@@ -30,16 +30,34 @@ Workflow 3 - Make a change on the master branch (assumes WF1 or WF2 done)
 
 Go to a local directory
 
-git pull origin master (to ensure you're uo-to-date)
+git pull origin master (to ensure you're up-to-date)
 make changes to file or add new files)
 git status (see what's changed)
-git add filename or got add -A (add files one at a time or all at once)
+git add filename or git add -A (add files one at a time or all at once)
 git commit (if no -m, it will open the default editor to make a comment)
-git pull origin master (to ensure you're uo-to-date)
+git pull origin master (to ensure you're up-to-date)
 git push origin master
 
 
 Workflow 4 - Branch, Merge, Pull Request (assumes WF1 or WF2 done)
 -------------------------------------------------------------------------
 
-TBD
+git branch (should show master branch at least)
+git branch mybranch
+git checkout mybranch (switch to the branch)
+git branch (now shows that you're on the branch)
+make changes to file or add new files)
+git status (see what's changed)
+git add filename or git add -A (add files one at a time or all at once)
+git commit 
+git pull origin master (to ensure you're up-to-date)
+fix and commit any merge issues
+git push origin mybranch
+
+Now go to GitHub to see the branch is there
+Do a Pull Request from GitHub on mybranch
+
+The person in charge of the master should now accept the pull request
+
+Now remove the branch (TBD how)
+
