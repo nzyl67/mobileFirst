@@ -1,0 +1,45 @@
+Workflow 1 - Turn a codebase into a git repo
+------------------------------------------------------------------
+Go to the codebase directory
+git init
+git add -A
+gt commit -m "adding all files from codebase"
+
+Now go to gitHub and create a repo named codebase (or whatever)
+Copy the clone URL (will be something like https:...)
+
+Go back to the local codebase directory
+
+git remote add origin https:...
+
+git push origin master
+
+Workflow 2 - Create a GitHub repo and then clone it
+------------------------------------------------------------------
+
+Now go to gitHub and create a repo named codebase (or whatever)
+Copy the clone URL
+
+Go to a local directory
+
+git clone https:...
+
+
+Workflow 3 - Make a change on the master branch (assumes WF1 or WF2 done)
+-------------------------------------------------------------------------
+
+Go to a local directory
+
+git pull origin master (to ensure you're uo-to-date)
+make changes to file or add new files)
+git status (see what's changed)
+git add filename or got add -A (add files one at a time or all at once)
+git commit (if no -m, it will open the default editor to make a comment)
+git pull origin master (to ensure you're uo-to-date)
+git push origin master
+
+
+Workflow 4 - Branch, Merge, Pull Request (assumes WF1 or WF2 done)
+-------------------------------------------------------------------------
+
+TBD
